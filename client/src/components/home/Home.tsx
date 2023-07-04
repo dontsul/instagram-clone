@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 export const Home = () => {
   return (
-    <div>
+    <div className="px-2 w-full">
       <header className="flex items-center justify-between px-2 mb-7">
         <div className="flx items-center">
           {" "}
@@ -22,7 +22,10 @@ export const Home = () => {
           </Link>
         </div>
       </header>
-      <HomeStoriesList />
+      <div className="overflow-x-auto">
+        {" "}
+        <HomeStoriesList />{" "}
+      </div>
       <HomePostsList />
     </div>
   )

@@ -90,10 +90,13 @@ export const Menu = () => {
       <ul className="flex items-center justify-between flex-row md:flex-col md:items-center lg:items-start md:h-full md:space-y-1 ">
         {menuItem.map(({ el: Element, title, path, cn }, i) => (
           <li
-            className={`md:hover:bg-teal-950 px-4 py-3 rounded-lg cursor-pointe ${cn}`}
+            className={`md:hover:bg-teal-950  rounded-lg cursor-pointe ${cn}`}
             key={i}
           >
-            <Link className="flex items-center justify-center" to={path}>
+            <Link
+              className="flex items-center justify-center h-full w-full px-4 py-3"
+              to={path}
+            >
               <Element className="" size={25} color={"#e2e8f0"} />{" "}
               <span className="hidden lg:block ml-2">{title}</span>
             </Link>

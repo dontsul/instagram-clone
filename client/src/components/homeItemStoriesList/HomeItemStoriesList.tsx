@@ -2,7 +2,7 @@ import { Avatar } from "../avatar/Avatar"
 
 export const HomeItemStoriesList = () => {
   return (
-    <li>
+    <li className="">
       <Avatar />
     </li>
   )
