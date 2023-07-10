@@ -1,6 +1,7 @@
 import { SignInFormContent } from "../../components/signInFormContent/SignInFormContent"
 import { PhoneSignIn } from "../../components/phoneSignIn/PhoneSignIn"
 import { Footer } from "../../components/footer/Footer"
+import { Toaster } from "react-hot-toast"
 
 export const SignIn = () => {
   return (
@@ -10,6 +11,7 @@ export const SignIn = () => {
         <SignInFormContent />
       </div>
       <Footer />
+      <Toaster position="bottom-left" />
     </div>
   )
 }

@@ -8,10 +8,10 @@ import { Link } from "react-router-dom"
 export const Home = () => {
   return (
     <div className="px-2 w-full">
-      <header className="flex items-center justify-between px-2 mb-7">
+      <header className="flex items-center justify-between px-2 mb-4">
         <div className="flx items-center">
           {" "}
-          <InstagramTextIcon />
+          <InstagramTextIcon w={140} />
         </div>
         <div className="flex items-center">
           <Link to={`/`}>

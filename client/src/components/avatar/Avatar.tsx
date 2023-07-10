@@ -1,9 +1,19 @@
-export const Avatar = () => {
+import { FC } from "react"
+
+interface IAvatarProps {
+  h?: number
+  w?: number
+  cn?: string
+}
+
+export const Avatar: FC<IAvatarProps> = ({ w = 70, h = 70, cn }) => {
   return (
-    <div className="w-[70px] h-[70px] rounded-full">
+    <div className={`block rounded-full ${cn ? cn : ""}`}>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
+        height={h}
+        width={w}
         x="0px"
         y="0px"
         viewBox="0 0 50 50"

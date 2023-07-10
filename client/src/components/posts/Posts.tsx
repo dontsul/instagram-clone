@@ -14,7 +14,26 @@ import img11 from "../../assets/images/posts/11.jpg"
 import img12 from "../../assets/images/posts/12.png"
 
 const posts = [
-  { image: img1 },
+  {
+    image: img1,
+    user: { username: "vasyl", avatar: "avatar.png" },
+    likes: [
+      {
+        count: 1507,
+        user: { username: "vasyl", avatar: "avatar.png" },
+        createdAt: "05.07.2023",
+      },
+    ],
+    createdAt: "05.07.2023",
+    comments: [
+      {
+        count: 504,
+        user: { username: "vasyl", avatar: "avatar.png" },
+        text: "some comments",
+        createdAt: "05.07.2023",
+      },
+    ],
+  },
   { image: img2 },
   { image: img3 },
   { image: img4 },

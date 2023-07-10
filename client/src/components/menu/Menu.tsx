@@ -27,12 +27,12 @@ const menuItem: menuItemTypes[] = [
     path: "/",
     cn: "block",
   },
-  {
-    el: BiCompass,
-    title: "Explore",
-    path: "/explore",
-    cn: "hidden md:block",
-  },
+  // {
+  //   el: BiCompass,
+  //   title: "Explore",
+  //   path: "/explore",
+  //   cn: "hidden md:block",
+  // },
 
   {
     el: BiMessageRoundedDots,

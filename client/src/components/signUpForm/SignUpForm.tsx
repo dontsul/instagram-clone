@@ -3,13 +3,10 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { Button } from "../button/Button"
 import { Input } from "../input/Input"
-
-type FormData = {
-  email: string
-  fullName: string
-  username: string
-  password: string
-}
+import { IFormRegistation } from "../../interfaces/auth"
+import { fetchRegistation } from "../../features/auth/registrationSlice"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import { notify } from "../../utils/notify"
 
 const schema = yup
   .object({
@@ -21,6 +18,7 @@ const schema = yup
   .required()
 
 export const SignUpForm = () => {
+  const dispatch = useAppDispatch()
   const {
     control,
     handleSubmit,
@@ -35,9 +33,8 @@ export const SignUpForm = () => {
       password: "",
     },
   })
-  const onSubmit = (data: FormData) => {
-    console.log(data)
-    reset()
+  const onSubmit = (data: IFormRegistation) => {
+    dispatch(fetchRegistation(data))
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
